@@ -9,21 +9,82 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: hsl(0, 0%, 95%);
 }
 
 section .row {
   display: grid;
-  grid-template-columns: repeat(3, 300px);
-  grid-template-rows: 450px;
-  background-color: red;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 500px;
+  border-radius: 7px;
+  transition: all 0.2s;
+}
+section .row #sedan {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 10px 0 0 10px;
+}
+section .row #suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+section .row #luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 7px 7px 0;
 }
 section .row .block {
   padding: 3rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 section .row .block .info h3 {
   font-size: 2.6rem;
+  color: hsl(0, 0%, 95%);
   font-family: "Big Shoulders Display", sans-serif;
   text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+section .row .block .info p {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.65rem;
+}
+section .row .block .button button {
+  padding: 0.87rem 1.93rem;
+  border-radius: 2rem;
+  border: none;
+}
+section .row .block .button .sedan {
+  color: hsl(31, 77%, 52%);
+}
+section .row .block .button .suvs {
+  color: hsl(184, 100%, 22%);
+}
+section .row .block .button .luxury {
+  color: hsl(179, 100%, 13%);
+}
+
+@media screen and (max-width: 980px) {
+  section .row {
+    transform: scale(0.8);
+  }
+}
+@media screen and (max-width: 740px) {
+  body {
+    align-items: initial;
+  }
+  section .row {
+    grid-template-columns: 300px;
+    grid-template-rows: 500px;
+    margin-bottom: 3rem;
+  }
+  section .row #sedan {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 10px 10px 0 0;
+  }
+  section .row #suvs {
+    background-color: hsl(184, 100%, 22%);
+  }
+  section .row #luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 0 7px 7px;
+  }
 }/*# sourceMappingURL=indesx.css.map */

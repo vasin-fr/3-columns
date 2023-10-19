@@ -10,27 +10,73 @@ $light-gray: hsl(0, 0%, 95%)
     font-size: 15px    
     font-family: 'Lexend Deca', sans-serif
 
-
-
 body 
     height: 100vh
     display: flex
     justify-content: center
     align-items: center
+    background-color: $light-gray
 
 section
     .row
         display: grid
-        grid-template-columns: repeat(3, 300px)
-        grid-template-rows: 450px
-        background-color: red
+        grid-template-columns: 300px 300px 300px
+        grid-template-rows: 500px
+        border-radius: 7px
+        transition: all .2s
+        #sedan
+            background-color: $bright-orange
+            border-radius: 10px 0 0 10px
+        #suvs
+            background-color: $dark-cyan
+        #luxury
+            background-color: $very-dark-cyan
+            border-radius: 0 7px 7px 0 
         .block
             padding: 3rem
             display: flex
             flex-direction: column
+            justify-content: space-between
             .info
                 h3
                     font-size: 2.6rem
+                    color: $light-gray
                     font-family: 'Big Shoulders Display', sans-serif
                     text-transform: uppercase
+                    margin-bottom: 2rem
+                p
+                    color: $white
+                    line-height: 1.65rem
+            .button
+                button
+                    padding: .87rem 1.93rem
+                    border-radius: 2rem
+                    border: none
+                .sedan
+                    color: $bright-orange
+                .suvs
+                    color: $dark-cyan
+                .luxury
+                    color: $very-dark-cyan
 
+@media screen and (max-width: 980px)
+    section
+        .row
+            transform: scale(.8)
+
+@media screen and (max-width: 740px)
+    body 
+        align-items: initial
+    section    
+        .row
+            grid-template-columns: 300px
+            grid-template-rows: 500px
+            margin-bottom: 3rem
+            #sedan
+                background-color: $bright-orange
+                border-radius: 10px 10px 0 0
+            #suvs
+                background-color: $dark-cyan
+            #luxury
+                background-color: $very-dark-cyan
+                border-radius: 0 0 7px 7px 
